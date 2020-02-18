@@ -5,7 +5,7 @@ Website for LEST-Treecare.
 ## Table of contents
 
 -   [Installation](#installation)
--   [Testing and Production](#testing-and-production)
+-   [Testing, Formatting and Production](#testing,-formatting-and-production)
 -   [Final Product](#final-product)
 
 ## Installation
@@ -14,7 +14,11 @@ git clone the repo: https://github.com/fabiros/LEST-Treecare.git
 
 run `npm install`
 
-## Testing and Production
+## Testing, Formatting and Production
+
+For formatting the project run `npm run format`
+
+For testing the project with jest run `npm run test`
 
 For testing the project on a local server run `npm run dev`
 
