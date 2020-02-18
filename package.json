@@ -13,6 +13,7 @@
         "*.{js,jsx}": [
             "prettier --write --single-quote",
             "eslint --fix",
+            "eslint --ext md .",
             "git add ."
         ]
     },
