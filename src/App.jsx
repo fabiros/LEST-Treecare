@@ -1,16 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader/root';
-import HelloWorld from './components/hello-world';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+import { Home } from './pages';
 
-    render() {
-        return <HelloWorld title="Hello from React webpack" />;
-    }
+function App() {
+    return (
+        <Router>
+            <Switch>
+                <Route
+                    path="/:url*"
+                    exact
+                    strict
+                    render={props => (
+                        <Redirect to={`${props.location.pathname}/`} />
+                    )}
+                />
+                <Route exact path="/" component={Home} />
+            </Switch>
+        </Router>
+    );
 }
+
+App.propTypes = {
+    location: PropTypes.shape({
+        pathname: PropTypes.string,
+    }),
+};
 
 export default hot(App);
