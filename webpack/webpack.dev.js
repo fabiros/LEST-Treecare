@@ -13,6 +13,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(css|scss)$/,
+                exclude: /(node_modules)/,
                 use: [
                     'style-loader',
                     {
@@ -20,12 +21,17 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             localsConvention: 'camelCase',
-                            modules: {
+                            /* modules: {
                                 localIdentName: '[local]___[hash:base64:5]',
-                            },
+                            }, */
                         },
                     },
-                    'sass-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
                 ],
             },
         ],
