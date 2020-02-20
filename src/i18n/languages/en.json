@@ -1,3 +1,8 @@
 {
-    "forest": "Forest"
+    "labels": {
+        "home": "Home",
+        "services": "Services",
+        "gallery": "Gallery",
+        "contact": "Contact"
+    }
 }

@@ -8,33 +8,38 @@ import {
     Button,
 } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
-export default function NavigationBar() {
+export default function NavigationBar({ defaultActiveKey }) {
     const { t } = useTranslation();
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" defaultActiveKey={defaultActiveKey}>
             <Navbar.Brand href="#home">{t('forest')}</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link to="/home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">
+                    <Nav.Link to="/">{t('labels:home')}</Nav.Link>
+                    <NavDropdown
+                        title={t('labels:services')}
+                        id="basic-nav-dropdown"
+                    >
+                        <NavDropdown.Item to="/services/a">
                             Action
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
+                        <NavDropdown.Item to="/services/a2">
                             Another action
                         </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">
+                        <NavDropdown.Item to="/services/a3">
                             Something
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
+                        <NavDropdown.Item to="/services/a4">
                             Separated link
                         </NavDropdown.Item>
                     </NavDropdown>
+                    <Nav.Link to="/gallery">{t('labels:gallery')}</Nav.Link>
+                    <Nav.Link to="/contact">{t('labels:contact')}</Nav.Link>
                 </Nav>
                 <Form inline>
                     <FormControl
@@ -48,3 +53,7 @@ export default function NavigationBar() {
         </Navbar>
     );
 }
+
+NavigationBar.propTypes = {
+    defaultActiveKey: PropTypes.string,
+};
