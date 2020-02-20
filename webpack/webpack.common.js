@@ -34,6 +34,28 @@ module.exports = {
                             outputPath: commonPaths.imagesFolder,
                         },
                     },
+                    /* {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            optipng: {
+                                enabled: process.env.NODE_ENV === 'production',
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            /*  webp: {
+                                quality: 75,
+                            },
+                        },
+                    }, */
                 ],
             },
             {
@@ -61,8 +83,23 @@ module.exports = {
     },
     resolve: {
         modules: ['src', 'node_modules'],
-        extensions: ['*', '.js', '.jsx', '.css', '.scss'],
-        alias: { src: commonPaths.src, 'react-dom': '@hot-loader/react-dom' },
+        extensions: [
+            '*',
+            '.js',
+            '.jsx',
+            '.css',
+            '.scss',
+            '.gif',
+            '.png',
+            '.jpg',
+            '.jpeg',
+            '.svg',
+        ],
+        alias: {
+            src: commonPaths.src,
+            'react-dom': '@hot-loader/react-dom',
+            images: commonPaths.images,
+        },
     },
     plugins: [
         new webpack.ProgressPlugin(),

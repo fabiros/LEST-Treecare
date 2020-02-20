@@ -21,6 +21,12 @@ module.exports = function(api) {
         'transform-react-pure-class-to-function',
         '@babel/plugin-transform-runtime',
         'react-hot-loader/babel',
+        [
+            'object-to-json-parse',
+            {
+                minJSONStringSize: 10240, // Set to 10kB like suggested in package
+            },
+        ],
         // 'i18next-extract',
 
         // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2
