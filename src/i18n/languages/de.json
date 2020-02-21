@@ -3,6 +3,18 @@
         "home": "Home",
         "services": "Dienstleistungen",
         "gallery": "Galerie",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "removal": "Abtragungen",
+        "treeCare": "Baumpflege",
+        "otherServices": "Sonstige Dienstleistungen"
+    },
+    "routes": {
+        "home": "/",
+        "gallery": "/gallerie",
+        "contact": "/kontakt",
+        "services": "/dienstleistungen",
+        "removal": "/dienstleistungen/abtragungen",
+        "treeCare": "/dienstleistungen/baumpflege",
+        "otherServices": "/dienstleistungen/sonstige"
     }
 }

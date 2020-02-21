@@ -18,6 +18,10 @@
     },
     "root": true,
     "rules": {
+        "react/jsx-props-no-spreading": [1, {
+            "custom": "ignore",
+            "explicitSpread": "ignore" 
+        }],
         "react/prefer-stateless-function": "off",
         "react/self-closing-comp": [
             "warn",

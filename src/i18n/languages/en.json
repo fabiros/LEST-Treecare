@@ -3,6 +3,18 @@
         "home": "Home",
         "services": "Services",
         "gallery": "Gallery",
-        "contact": "Contact"
+        "contact": "Contact",
+        "removal": "Wood removal",
+        "treeCare": "Tree care",
+        "otherServices": "Other services"
+    },
+    "routes": {
+        "home": "/",
+        "gallery": "/gallery",
+        "contact": "/contact",
+        "services": "/services",
+        "removal": "/services/woodRemoval",
+        "treeCare": "/services/treeCare",
+        "otherServices": "/services/others"
     }
 }

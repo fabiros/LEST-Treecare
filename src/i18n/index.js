@@ -12,6 +12,6 @@ export default i18next
     .init(
         Object.assign(options, {
             saveMissing: true, // send not translated keys to endpoint
-            keySeparator: false, // we do not use keys in form messages.welcome
+            // keySeparator: false, // we do not use keys in form messages.welcome
         })
     );
