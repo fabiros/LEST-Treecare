@@ -1,4 +1,5 @@
-import Home from './home.jsx';
+import Home from './home';
+import NoMatch from './noMatch.jsx';
 import { OtherServices, WoodRemoval, TreeCare } from './services';
 
 export {
@@ -6,4 +7,5 @@ export {
     OtherServices,
     WoodRemoval as WoodRemovalService,
     TreeCare as TreeCareService,
+    NoMatch,
 };

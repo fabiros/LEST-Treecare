@@ -8,6 +8,7 @@ import {
     OtherServices,
     WoodRemovalService,
     TreeCareService,
+    NoMatch,
 } from '../pages';
 
 function LESTRouter({ t }) {
@@ -32,6 +33,10 @@ function LESTRouter({ t }) {
                     component: TreeCareService,
                 },
             ],
+        },
+        {
+            path: '*',
+            component: NoMatch,
         },
     ];
 
