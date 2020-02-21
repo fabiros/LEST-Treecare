@@ -4,24 +4,25 @@ import { useTranslation } from 'react-i18next';
 // import PropTypes from 'prop-types';
 
 import Logo from '../../assets/images/logo';
-import Leaf from '../../assets/images/leaf';
 
 export default function NavigationBar() {
     const { t } = useTranslation();
 
     return (
         <div style={{ boxShadow: '0px -2px 5px rgba(68, 68, 68, 0.6)' }}>
-            <Navbar bg="transparent" expand="lg" type="dark" as={Nav.Item}>
+            <Navbar
+                bg="transparent"
+                expand="md"
+                className="py-0"
+                type="dark"
+                as={Nav.Item}
+            >
                 <div className="container">
                     <Navbar.Brand to={t('routes.home')}>
                         <img
                             alt="Logo"
                             src={Logo}
-                            className="d-inline-block align-top"
-                        />
-                        <img
-                            alt="Logo"
-                            src={Leaf}
+                            height="60"
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
