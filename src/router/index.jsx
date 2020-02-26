@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+} from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
@@ -10,6 +15,7 @@ import {
     TreeCareService,
     NoMatch,
 } from '../pages';
+import { Navbar, Container } from '../components';
 
 function LESTRouter({ t }) {
     const routes = [
@@ -48,6 +54,7 @@ function LESTRouter({ t }) {
                 {routes.map(route => {
                     return <RouteWithSubRoutes key={route.path} {...route} />;
                 })}
+                <Redirect exact from="/home" to={t('routes.home')} />
             </Switch>
         </Router>
     );
@@ -57,10 +64,17 @@ function RouteWithSubRoutes(route) {
     return (
         <Route
             path={route.path}
-            render={props => (
+            render={props => {
                 // pass the sub-routes down to keep nesting
-                <route.component {...props} routes={route.routes} />
-            )}
+                return (
+                    <div>
+                        <Navbar {...props} />
+                        <Container>
+                            <route.component {...props} routes={route.routes} />
+                        </Container>
+                    </div>
+                );
+            }}
         />
     );
 }

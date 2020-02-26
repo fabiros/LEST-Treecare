@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { Navbar, Container } from '../components';
-
 function Contact() {
     const { t } = useTranslation();
 
@@ -18,20 +16,15 @@ export default function Home() {
     // const { t } = useTranslation();
 
     return (
-        <div>
-            <Navbar />
-            <Container>
-                <ul>
-                    <li>
-                        <Link to="/home">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" component={Contact}>
-                            Home
-                        </Link>
-                    </li>
-                </ul>
-            </Container>
-        </div>
+        <ul>
+            <li>
+                <Link to="/home">Home</Link>
+            </li>
+            <li>
+                <Link to="/contact" component={Contact}>
+                    Home
+                </Link>
+            </li>
+        </ul>
     );
 }

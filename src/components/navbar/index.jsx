@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/logo';
 
-export default function NavigationBar() {
+export default function NavigationBar({ location: { pathname } }) {
     const { t } = useTranslation();
 
     return (
@@ -32,7 +32,7 @@ export default function NavigationBar() {
                         <Nav className="ml-auto">
                             <Nav.Link
                                 to={t('routes.home')}
-                                active
+                                active={pathname === t('routes.home')}
                                 as={Link}
                                 bsPrefix="nav-link text-dark"
                             >
@@ -67,6 +67,7 @@ export default function NavigationBar() {
                             <Nav.Link
                                 as={Link}
                                 to={t('routes.gallery')}
+                                active={pathname === t('routes.gallery')}
                                 bsPrefix="nav-link text-dark"
                             >
                                 {t('labels.gallery')}
@@ -74,6 +75,7 @@ export default function NavigationBar() {
                             <Nav.Link
                                 as={Link}
                                 to={t('routes.contact')}
+                                active={pathname === t('routes.contact')}
                                 bsPrefix="nav-link text-dark"
                             >
                                 {t('labels.contact')}
@@ -85,3 +87,9 @@ export default function NavigationBar() {
         </div>
     );
 }
+
+NavigationBar.propTypes = {
+    location: PropTypes.shape({
+        pathname: PropTypes.string,
+    }),
+};
