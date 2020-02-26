@@ -91,5 +91,5 @@ export default function NavigationBar({ location: { pathname } }) {
 NavigationBar.propTypes = {
     location: PropTypes.shape({
         pathname: PropTypes.string,
-    }),
+    }).isRequired,
 };
