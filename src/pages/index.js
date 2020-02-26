@@ -1,11 +1,15 @@
-import Home from './home';
-import NoMatch from './noMatch.jsx';
-import { OtherServices, WoodRemoval, TreeCare } from './services';
+import {
+    LoadableHome,
+    LoadableNoMatch,
+    LoadableTreeCare,
+    LoadableOtherServices,
+    LoadableWoodRemoval,
+} from './loadable.jsx';
 
 export {
-    Home,
-    OtherServices,
-    WoodRemoval as WoodRemovalService,
-    TreeCare as TreeCareService,
-    NoMatch,
+    LoadableHome as Home,
+    LoadableOtherServices as OtherServices,
+    LoadableWoodRemoval as WoodRemovalService,
+    LoadableTreeCare as TreeCareService,
+    LoadableNoMatch as NoMatch,
 };

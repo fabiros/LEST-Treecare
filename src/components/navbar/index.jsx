@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 // import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/images/logo';
 
@@ -18,7 +19,7 @@ export default function NavigationBar() {
                 as={Nav.Item}
             >
                 <div className="container">
-                    <Navbar.Brand to={t('routes.home')}>
+                    <Navbar.Brand to={t('routes.home')} as={Link}>
                         <img
                             alt="Logo"
                             src={Logo}
@@ -32,6 +33,7 @@ export default function NavigationBar() {
                             <Nav.Link
                                 to={t('routes.home')}
                                 active
+                                as={Link}
                                 bsPrefix="nav-link text-dark"
                             >
                                 {t('labels.home')}
@@ -42,26 +44,35 @@ export default function NavigationBar() {
                                 id="basic-nav-dropdown"
                                 bsPrefix="nav-link text-dark"
                             >
-                                <NavDropdown.Item to={t('routes.removal')}>
+                                <NavDropdown.Item
+                                    to={t('routes.removal')}
+                                    as={Link}
+                                >
                                     {t('labels.removal')}
                                 </NavDropdown.Item>
-                                <NavDropdown.Item to={t('routes.treeCare')}>
+                                <NavDropdown.Item
+                                    as={Link}
+                                    to={t('routes.treeCare')}
+                                >
                                     {t('labels.treeCare')}
                                 </NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item
+                                    as={Link}
                                     to={t('routes.otherServices')}
                                 >
                                     {t('labels.otherServices')}
                                 </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link
+                                as={Link}
                                 to={t('routes.gallery')}
                                 bsPrefix="nav-link text-dark"
                             >
                                 {t('labels.gallery')}
                             </Nav.Link>
                             <Nav.Link
+                                as={Link}
                                 to={t('routes.contact')}
                                 bsPrefix="nav-link text-dark"
                             >

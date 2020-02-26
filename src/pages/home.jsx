@@ -1,20 +1,37 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import { Navbar, Container } from '../components';
 
-export default function Home() {
+function Contact() {
+    const { t } = useTranslation();
+
     return (
-        <Router>
-            <div>
-                <Navbar />
-                <Container>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                    </ul>
-                </Container>
-            </div>
-        </Router>
+        <div>
+            <Link to={t('routes.contact')}>{t('labels.contact')}</Link>
+        </div>
+    );
+}
+
+export default function Home() {
+    // const { t } = useTranslation();
+
+    return (
+        <div>
+            <Navbar />
+            <Container>
+                <ul>
+                    <li>
+                        <Link to="/home">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact" component={Contact}>
+                            Home
+                        </Link>
+                    </li>
+                </ul>
+            </Container>
+        </div>
     );
 }

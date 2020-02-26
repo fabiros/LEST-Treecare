@@ -16,9 +16,11 @@ function LESTRouter({ t }) {
         {
             path: t('routes.home'),
             component: Home,
+            exact: true,
         },
         {
             path: t('routes.services'),
+            exact: true,
             routes: [
                 {
                     path: t('routes.otherServices'),
