@@ -6,7 +6,8 @@
         "contact": "Contact",
         "removal": "Wood removal",
         "treeCare": "Tree care",
-        "otherServices": "Other services"
+        "otherServices": "Other services",
+        "readMore": "Read more"
     },
     "routes": {
         "home": "/",
@@ -16,5 +17,8 @@
         "removal": "/services/woodRemoval",
         "treeCare": "/services/treeCare",
         "otherServices": "/services/others"
+    },
+    "texts": {
+        "model": "Bäume sind von großem ökologischem und volkswirtschaftlichem Wert für Mensch und seine Umwelt. Für unser Team ist es daher ein großes Anliegen, Ihre Gehölze durch fachgerechte Arbeiten langfristig zu erhalten.\nUnsere langjährige Praxiserfahrung und  Ausbildung sowie regelmäßige vielseitige Weiterbildungen ermöglichen uns Ihren Ansprüchen gerecht zu werden und überzeugende nachhaltige Resultate zu liefern.\nWir sind ein Unternehmen, das sich speziell auf Seilklettertechnik spezialisiert hat. Durch diese baumschonende Technik ist es möglich Pflege und Fällung auf engstem Raum ohne schwere Geräte schnell und kosteneffizient durchzuführen."
     }
 }
