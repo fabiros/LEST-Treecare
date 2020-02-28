@@ -1,11 +1,17 @@
 import universal from 'react-universal-component';
 import Loading from './loading';
 
-const Home = universal(() => import('./home.jsx'));
-const OtherServices = universal(() => import('./services/others.jsx'));
-const WoodRemovalService = universal(() => import('./services/removal.jsx'));
-const TreeCareService = universal(() => import('./services/treeCare.jsx'));
-const NoMatch = universal(() => import('./noMatch.jsx'));
+const Home = universal(() => import('./home.jsx'), Loading);
+const OtherServices = universal(() => import('./services/others.jsx'), Loading);
+const WoodRemovalService = universal(
+    () => import('./services/removal.jsx'),
+    Loading
+);
+const TreeCareService = universal(
+    () => import('./services/treeCare.jsx'),
+    Loading
+);
+const NoMatch = universal(() => import('./noMatch.jsx'), Loading);
 
 export {
     Home,
