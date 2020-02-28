@@ -27,6 +27,7 @@ module.exports = function(api) {
             },
         ],
         'react-hot-loader/babel',
+        'universal-import',
         // 'i18next-extract',
 
         // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2
