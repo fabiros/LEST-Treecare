@@ -7,7 +7,10 @@
         "removal": "Abtragungen",
         "treeCare": "Baumpflege",
         "otherServices": "Sonstige Dienstleistungen",
-        "readMore": "Weiterlesen"
+        "readMore": "Weiterlesen",
+        "readMoreRemoval": "Mehr über Abtragungen",
+        "readMoreTreeCare": "Mehr über Baumpflege",
+        "readMoreOtherServices": "Mehr über unsere Services"
     },
     "routes": {
         "home": "/",
@@ -19,6 +22,9 @@
         "otherServices": "/dienstleistungen/sonstige"
     },
     "texts": {
-        "model": "Bäume sind von großem ökologischem und volkswirtschaftlichem Wert für Mensch und seine Umwelt. Für unser Team ist es daher ein großes Anliegen, Ihre Gehölze durch fachgerechte Arbeiten langfristig zu erhalten.\nUnsere langjährige Praxiserfahrung und  Ausbildung sowie regelmäßige vielseitige Weiterbildungen ermöglichen uns Ihren Ansprüchen gerecht zu werden und überzeugende nachhaltige Resultate zu liefern.\nWir sind ein Unternehmen, das sich speziell auf Seilklettertechnik spezialisiert hat. Durch diese baumschonende Technik sind es möglich Pflege und Fällung auf engstem Raum ohne schwere Geräte schnell und kosteneffizient durchzuführen."
+        "model": "Bäume sind von großem ökologischem und volkswirtschaftlichem Wert für Mensch und seine Umwelt. Für unser Team ist es daher ein großes Anliegen, Ihre Gehölze durch fachgerechte Arbeiten langfristig zu erhalten.\nUnsere langjährige Praxiserfahrung und  Ausbildung sowie regelmäßige vielseitige Weiterbildungen ermöglichen uns Ihren Ansprüchen gerecht zu werden und überzeugende nachhaltige Resultate zu liefern.\nWir sind ein Unternehmen, das sich speziell auf Seilklettertechnik spezialisiert hat. Durch diese baumschonende Technik sind es möglich Pflege und Fällung auf engstem Raum ohne schwere Geräte schnell und kosteneffizient durchzuführen.",
+        "removal": "Durch das stückweise Fällen der Baumteile und den Einsatz von Abseiltechnik arbeiten wir besonders sicher und auch an schwer erreichbaren Standorten. Anfallendes Astwerk und Stammteile entsorgen wir ebenfalls für Sie.",
+        "treeCare": "Baumpflege beinhaltet Maßnahmen an Baum und Baumumfeld zur Vermeidung von Fehlentwicklungen und zur Erhaltung der Vitalität eines Baumes. Unsere Baumpflegemaßnahmen werden nach den Richtlinien der ZTV-Baumpflege ausgeführt. Sie beinhalten u.a. die Kronenpflege, die Totholzentnahme, die Kroneneinkürzung und den Verbau von Kronensicherungen. Naturnahes Arbeiten ist uns ein großes Anliegen - langfristiger Erhalt von Bäumen durch sanfte und baumschonende Eingriffe zeichnet unsere Arbeit aus.",
+        "otherServices": "- Neupflanzung\n- Kronensicherungen\n- Brennholz & Hackschnitzelverkauf\n- Stammaufschnitt (milling)"
     }
 }
