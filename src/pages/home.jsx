@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import PropTypes from 'prop-types';
 
 import Icon from '../components/icon';
+import Footer from '../components/footer';
 import RemovalImg from '../assets/images/removal';
 import TreeCareImg from '../assets/images/treeCare';
 import OtherServicesImg from '../assets/images/otherServices';
@@ -88,6 +89,7 @@ export default function Home({ location: { pathname } }) {
                 </ButtonToolbar>
                 <Services />
                 <Contact />
+                <Footer />
             </section>
             <section>{pathname === t('routes.contact') && <Contact />}</section>
             <section>
