@@ -69,7 +69,7 @@ function RouteWithSubRoutes(route) {
                 return (
                     <div>
                         <Navbar {...props} />
-                        <Container>
+                        <Container classes="px-5">
                             <route.component {...props} routes={route.routes} />
                         </Container>
                     </div>
